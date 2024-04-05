@@ -1,0 +1,20 @@
+import sys
+from markdown import markdown
+
+def convert_md_to_html(md_file, html_file):
+    with open(md_file, 'r', errors='ignore') as f_md:
+        md_content = f_md.read()
+        html_content = markdown(md_content)
+        
+    with open(html_file, 'w') as f_html:
+        f_html.write(html_content)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: python convert_md_to_html.py <input_md_file> <output_html_file>")
+        sys.exit(1)
+    
+    md_file = sys.argv[1]
+    html_file = sys.argv[2]
+    convert_md_to_html(md_file, html_file)
+
