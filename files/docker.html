@@ -1,0 +1,73 @@
+<!-- About page -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emre Kaya</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Personal WebSite</h1>
+  </header>
+  <main>
+    <aside>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About Me</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../portfolio.html">Portfolio</a></li>
+        <li><a href="../notes.html">Notes</a></li>
+      </ul>
+    </aside>
+    <section>
+      <h2>My Docker Notes</h2>
+<div class="paragraph-container">
+  <p>Merhabalar, Docker notlarıma hoşgeldiniz. Benim hakkımda daha detaylı bilgi almak için <a href="../about.html">Hakkımda</a> kısmını okuyabilirsiniz. Bu bölüm docker notlarımı içermektedir. Bu dokümanda bütün komutlar sevdiğim, kullandığım ve felsefi olarak doğru bulduğumdan dolayı <b>linux</b> üzerinde öğrenilmiş, denenmiş, not edilmiştir. Emeği geçen herkesin ismini geçirsem dokümandan daha uzun olacaktır. O yüzden üzerimde, özgür yazılım dünyasında emeği geçen herkese sonsuz teşekkürler.<br> Konumuza dönersek, bir senaryo üzerinden sizlere docker'ı anlatmanın çok daha iyi olacağı kanısındayım. Eğer <b> yalnızca bilgiye</b> ihtiyacınız varsa docker'ın resmi dokümantasyonu okuyabilirsiniz. <a href="https://docs.docker.com/">Docker Docs</a> Sizler için daha faydalı olacağı kanısındayım. Fakat eğer bu dünyaya bir bakış atmak, neymiş ulan bu konteynerlar? sorusuna cevap olmak isterseniz doğru yerdesiniz. Tabii ki bu bilgiler resmi dokümanda da bulunmakta fakat türkçe kaynak, yeni başlayanlar için bulunmaz nimet konumunda.<br	> Sizlerle paylaşmayı istediğim ilk şey naçizane docker'dan ne anladığım.<br> Docker benim için sistemimde yığınla programı aktif olarak tutmak istemediğimde kullandığım, bazı teknolojileri yalnızca test etmek istediğimde kullandığım, gereklilikler yığınına boğulmamak için kullandığım, işleti değiştirirken (sık sık format atıyorum) sorunlarımı azaltan, taşınmamı kolaylaştıran bir sistem. Bunun yanı sıra yazılım geliştirme süreçlerini hızlandıran, bir DevOps'cunun vazgeçilmezidir.<br> Kendi adıma bir yandan şirket sunucusunda da kullandığımız gerçekten fazlasıyla <b>kullanışlı</b> bir teknoloji.<br> Aslında burada tüm övgüleri docker'e yapıyoruz gibi görünse de işin temelinde docker da birçok diğer tool da konteyner dediğimiz teknolojiye dayanmakta. Burada o önemli soruyu sormamız gerekmekte. Konteyner derken tam olarak neyden basediyoruz, işlevi ne ?<br> Konteynerler, isminden de anlaşılacaklaru üzere aslında koca birer uygulama kutularıdır. Uygulamaları ve <b>tüm bağımlılıklarını</b> içeren izole edilmiş ortamlardır. Bununla şunu kast ediyoruz örneğin, benim ana makinemde gcc versyonum 14.1.1 iken konteynerime bağımlılık problemleri yaşamadan her ne zaman istersem istediğim sürüm derleyicimi kurabilirim. Her konteyner, kendi dosya sistemi, işlem alanı, ağ bağlantısı ve kullanıcıları ile bağımsız bir sistem gibi çalışır, dolayısı ile size istediğiniz kadar kirletip dağıtabileceğiniz kocaman fakat bir o kadar taşınabilir, temizlemesi kolay birer kum havuzu; oyun alanı ne derseniz, sunmaktadır. Konteynerler, sanal makinelerden farklı olarak, aynı işletim sistemi çekirdeğini paylaşır ve bu nedenle daha hafif ve hızlıdırlar.<br> Ve işte o klasik soru, her programlama diline başlarken kullanılan; <b>Öğrenmeye nereden başlarım?</b> Bildiğiniz üzere yazılım dünyasında tek ihtiyacınız siz ve <b>herhangi bir</b> bilgisayar. Bu telefonunuz bile olabilir... (Nasıl demeyin, mümkün belki ileride bununla alakalı bir yazı yayınlarım :) )<br> Neyse fazla uzattık, hadi konuya girelim!<br> Bilgisayarınızı açtınız, Linux işletim sistemi sanal bir makinede (VM) veya fiziksel bir makinede çalıştırıldı. Şimdi ne yapacaksınız?<br> Girip üstten bir Docker docs'u okuyun derim. Fazla İngilceniz olmasa bile bir göz gezdirin, gerekirse yarım yamalak da olsa çevirin.<br> Karşınıza çıkacak ilk ekran Get Docker olacak.<br> Ne kadar güzel, hemen başlayalım...<br> Ama bir saniye, Docker Desktop mu? O da ne??<br> Yazıyı okumadan önce bir girişiminiz olduysa bu uygulamayla kesinlikle tanışmışsınızdır. Belki de çoktan indirdiniz, sisteminizde koşuyor. Peki gerçekten gerekli mi ki? Bir sorgulayın derim. Bilge bir yazılımcı bir gün bana başkabir bilge yazılımcıdan duyduğu şu lafı etmişti "Bir uygulamadaki butoonların ne iş yaptığı hakkında en ufak bir fikrin yoksa, o butonları kullanmaya hakkınız yoktur." İlk duyduğumda pek anlamadım, katılmadım. Bu gün ise farklı düşünüyorum. Bir işin arka tarafını görmek kadar keyifli birşeyle henüz karşılaşmadım.<br> Sadece Docker ile tanışmak istiyoruz! Şu aşamada hiç gerek yok... Benim yaptığım hatalardan ilki sanırım neredeyse tüm işlevselliklerin yığılmış olduğu bu uygulamayı açıp sağa sola tıklayarak öğrenmeye çabalamam oldu ve benim için epey bir vakit kaybıydı. Peki o halde ne yapmalıyız? Docker bu uygulamanın yanı sıra epey işlevsel bir CLI-command line interface- de sunmakta ve başlangıç için ideal, ileri düzey kullanıcıların da bunu kullanacağını düşünüyorum. Peki bu uygulamaya nasıl erişebiliriz. Hikayemizi başa alıyorum. bilgisayarımızı açmıştık. Sıra kurulum yapmakta.<br> Bu aşamada şu anda yoğunluklu kullanılan 3 ana dağıtım ve bu dağıtımlarınkabul görmüş paket yöneticilerinden yararlanarak kurulum aşamasını ilerleteceğim</p>
+  <h3>Ubuntu / Debian</h3>
+  <p></p>
+  <pre>
+    <code>
+    </code>
+  </pre>
+
+  <h3>CentOS / Fedora</h3>
+  <p></p>
+  <h3>Arch Linux</h3>
+  <p></p>
+  <p>Hatam, öneriniz veya talebiniz varsa lütfen bana ulaşın:</p>
+  <p>Email: <a href="mailto:41emrekaya919@gmail.com">41emrekaya919@gmail.com</a></p>
+<br>
+<br>
+</div>
+
+
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2021 Stray</p>
+    <p>Email: <a href="mailto:41emrekaya919@gmail.com">41emrekaya919@gmail.com</a></p>
+  </footer>
+</body>
+    <script>
+        // JavaScript to fetch and display files dynamically
+        fetchFiles('/files'); // Assuming 'files' is the directory containing your files
+
+        async function fetchFiles(directory) {
+            const response = await fetch(directory);
+            const data = await response.text();
+
+            // Parse HTML response to extract filenames
+            const parser = new DOMParser();
+            const htmlDocument = parser.parseFromString(data, 'text/html');
+            const links = htmlDocument.querySelectorAll('a');
+
+            const fileList = document.getElementById('file-list');
+            links.forEach(link => {
+                const listItem = document.createElement('li');
+                const fileName = link.getAttribute('href').replace(/^.*[\\\/]/, '');
+                listItem.innerHTML = `<a href="${directory}/${fileName}" target="_blank">${fileName}</a>`;
+                fileList.appendChild(listItem);
+            });
+        }
+    </script>
+</html>
