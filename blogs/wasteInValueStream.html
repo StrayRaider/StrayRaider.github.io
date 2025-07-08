@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Modern Development Environment | StrayRaider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+    <!-- Sidebar -->
+    <nav class="fixed w-64 h-screen bg-gray-900 text-white p-8 flex flex-col">
+        <div class="text-center mb-8">
+            <img src="../assets/profile-image.jpg" alt="StrayRaider" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500 object-cover">
+            <h3 class="text-xl font-semibold">StrayRaider</h3>
+            <p class="text-gray-400">Software Developer</p>
+        </div>
+
+        <ul class="flex-grow space-y-4">
+            <li>
+                <a href="../index.html#home" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-home w-6"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#about" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-user w-6"></i> About Me
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#portfolio" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-code w-6"></i> Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#blog" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-blog w-6"></i> Blog
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#contact" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-envelope w-6"></i> Contact
+                </a>
+            </li>
+        </ul>
+
+        <div class="space-y-4">
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/StrayRaider/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/emre-kaya-724622216/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="text-center text-sm text-gray-500">
+                <p id="utc-time">2025-07-08 12:29:47</p>
+                <p id="current-user">StrayRaider</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="ml-64 flex-grow p-8">
+        <article class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+
+            
+            <div class="p-8">
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="text-blue-500">
+                        <i class="fas fa-calendar"></i>
+                        <span class="ml-2">July 8, 2025</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <i class="fas fa-tag"></i>
+                        <span class="ml-2">Technology</span>
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">
+                    Waste In The Value Stream
+                </h1>
+
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6">
+                        Texts
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        Why Use Docker for Development?
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Docker containers provide several benefits for development:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Consistent environment across team members</li>
+                        <li>Isolated dependencies and configurations</li>
+                        <li>Easy version control of development environment</li>
+                        <li>Quick onboarding of new team members</li>
+                    </ul>
+
+                    <!-- Code Example -->
+                    <div class="bg-gray-900 text-gray-100 rounded-lg p-6 mb-6">
+                        <pre class="overflow-x-auto"><code>
+# Example Dockerfile
+FROM node:16
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]</code></pre>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        Setting Up VS Code with Dev Containers
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Visual Studio Code's Remote - Containers extension allows you to use a Docker container 
+                        as a full-featured development environment...
+                    </p>
+
+                    <!-- Continue with more content... -->
+                </div>
+
+                <!-- Tags -->
+                <div class="mt-8 pt-8 border-t">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-700">Tags:</span>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            Docker
+                        </a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            VS Code
+                        </a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            Development
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Share Buttons -->
+                <div class="mt-8 flex items-center space-x-4">
+                    <span class="text-gray-700">Share:</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Same UTC time update script
+        function updateUTCTime() {
+            const now = new Date();
+            const utcString = now.toISOString().slice(0, 19).replace('T', ' ');
+            document.getElementById('utc-time').textContent = utcString;
+        }
+        setInterval(updateUTCTime, 1000);
+        updateUTCTime();
+    </script>
+</body>
+</html>
