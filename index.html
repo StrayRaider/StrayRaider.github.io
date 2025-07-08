@@ -1,31 +1,234 @@
-<!-- Home page -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Portfolio</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayRaider | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-  <header>
-    <h1>Welcome to My Personal WebSite</h1>
-  </header>
-  <main>
-    <aside>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="notes.html">Notes</a></li>
-      </ul>
-    </aside>
-    <section>
-      <h2>Home</h2>
-    </section>
-  </main>
-  <footer>
-    <p>Copyright &copy; 2021 Stray</p>
-    <p>Email: <a href="mailto:41emrekaya919@gmail.com">41emrekaya919@gmail.com</a></p>
-  </footer>
+<body class="bg-gray-100">
+    <!-- Sidebar -->
+    <nav class="fixed w-64 h-screen bg-gray-900 text-white p-8 flex flex-col">
+        <div class="text-center mb-8">
+            <img src="assets/profile-image.jpg" alt="StrayRaider" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500 object-cover">
+            <h3 class="text-xl font-semibold">StrayRaider</h3>
+            <p class="text-gray-400">Software Developer</p>
+        </div>
+
+        <ul class="flex-grow space-y-4">
+            <li>
+                <a href="#home" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-home w-6"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-user w-6"></i> About Me
+                </a>
+            </li>
+            <li>
+                <a href="#portfolio" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-code w-6"></i> Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#blog" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-blog w-6"></i> Blog
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-envelope w-6"></i> Contact
+                </a>
+            </li>
+        </ul>
+
+        <div class="space-y-4">
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/StrayRaider/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/emre-kaya-724622216/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="text-center text-sm text-gray-500">
+                <p id="utc-time">2025-07-08 12:29:47</p>
+                <p id="current-user">StrayRaider</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-64 flex-grow">
+        <!-- Home Section -->
+        <section id="home" class="min-h-full p-8">
+            <header class="text-center mb-12 pt-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Welcome to My Portfolio</h1>
+                <p class="text-xl text-blue-600">Software Developer & Tech Enthusiast</p>
+            </header>
+            <div class="max-w-4xl mx-auto prose">
+              <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+
+                <p class="text-lg text-gray-600 text-justify">
+                  Hi, I'm Emre. I've been using GNU/Linux for a time, and I love it! <br> Coding is my passion.
+                </p>
+                </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-full p-8 bg-white">
+            <header class="text-center mb-12 pt-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">About Me</h1>
+                <p class="text-xl text-blue-600">Get to know me better</p>
+            </header>
+            <!-- About content... -->
+            <div class="max-w-4xl mx-auto prose">
+              <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+
+                <p class="text-lg text-gray-600 text-justify">
+                  Abouth Me
+                </p>
+                </div>
+                </article>
+            </div>
+
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="min-h-full p-8">
+            <header class="text-center mb-12 pt-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Portfolio</h1>
+                <p class="text-xl text-blue-600">My Latest Projects</p>
+            </header>
+            <!-- Portfolio content... -->
+            <div class="max-w-4xl mx-auto prose">
+              <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+
+                <p class="text-lg text-gray-600 text-justify">
+                  Portfolio
+                </p>
+                </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="min-h-full p-8 bg-white">
+            <header class="text-center mb-12 pt-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Blog</h1>
+                <p class="text-xl text-blue-600">Thoughts and Insights</p>
+            </header>
+            <!-- Blog content... -->
+
+            <!-- Regular Blog Posts -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Blog Post Card 1 -->
+                <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <span class="text-blue-500">
+                                <i class="fas fa-calendar"></i>
+                                <span class="ml-2">July 5, 2025</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="#" class="hover:text-blue-500 transition-colors">
+                                Getting Started with Rust Programming
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            An introduction to Rust programming language, covering basic syntax, 
+                            ownership model, and common patterns...
+                        </p>
+                        <a href="blogs/blog-post.html" class="text-blue-500 hover:text-blue-600 transition-colors">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+        </section>
+
+<!-- Contact Section -->
+<section id="contact" class="min-h-screen p-8">
+    <header class="text-center mb-12 pt-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-2">Contact Me</h1>
+        <p class="text-xl text-blue-600">Let's get in touch</p>
+    </header>
+
+            <div class="max-w-4xl mx-auto prose">
+              <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6">
+                <div class="max-w-4xl mx-auto text-lg text-gray-600 space-y-4 content-center">
+                    <i class="fas fa-envelope text-blue-500 w-6 mr-2"></i>
+                    Email: <a href="mailto:41emrekaya919@gmail.com" class="text-blue-500 hover:underline">41emrekaya919@gmail.com</a>
+                </div>
+                </div>
+                </article>
+            </div>
+
+
+
+</section>
+
+    </main>
+
+    <script>
+        // Update UTC time
+        function updateUTCTime() {
+            const now = new Date();
+            const utcString = now.toISOString().slice(0, 19).replace('T', ' ');
+            document.getElementById('utc-time').textContent = utcString;
+        }
+        setInterval(updateUTCTime, 1000);
+        updateUTCTime();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active section detection
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-blue-500');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('bg-blue-500');
+                }
+            });
+        });
+
+        // Contact form handler
+        document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
