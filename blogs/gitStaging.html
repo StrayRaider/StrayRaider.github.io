@@ -78,27 +78,52 @@
                 </div>
 
                 <h1 class="text-4xl font-bold text-gray-900 mb-6">
-                    Yazılım Süreçlerinde İsraf Türleri
+                    Blog Header
                 </h1>
 
                 <div class="prose max-w-none">
                     <p class="text-gray-600 mb-6">
-                        İsraf bir işletmenin sürdürülebilirliği açısından en büyük tehdidi oluşturur. Üretim tarafında tanım olarak israf ;  müşterinin ihtiyacından veya ödemek isteyeceğinden daha fazla materyalin üründe kullanılmasıdır denebilir. Yazılımda israfın tanımı ise şu şekilde verilebilir : "müşteriye gecikme oluşturan, sonucu etkilemeden süreçten çıkarılabilecek etkinliklerdir." Tanımı alt başlıklara ayıracak olursak : <br> 
+                        Texts
                     </p>
 
-                    <ul class="list-disc list-inside text-gray-600 mb-6">
-                        <li><b>Yarım Kalmış işler :</b> Tamamlanmamış her iş, projede duraksama; yarım kalma haline sebep olur bu da bir diğer süreci bekletecektir.</li>
-                        <li><b>Fazladan Süreçler :</b> Müşteriye/projeye herhangi bir geri dönüş -değer- üretmeyen her ek süreç anlamsız efor ve zaman kaybı üretir.</li>
-                        <li><b>Fazlalık Özellikler :</b> Organizasyon yada müşterinin ihtiyacı olmayan ekstra özellikler zaman kaybı, sistem karmaşıklığı oluşturur.</li>
-                        <li><b>Görev değişimleri :</b> Süreçte birden fazla projede çalışması gereken insanların işler arası geçerken işin gereklerinden ötürü yaşadığı bağlam değişimleri çalışanın eforunu boşa harcar.</li>
-                        <li><b>Beklemeler :</b> herhangi bir kaynağı beklemesi gereken işler tamamlanamaz ve israfa sebep olur.</li>
-                        <li><b>Hareket :</b> bir alandan başka bir alana yapılan bilgi veya malzeme aktarımı.</li>
-                        <li><b>Yanlış Bilgi :</b> eksik, net olamayan yanlış bilgi, malzeme, ürünler israfa sebep olur. </li>
-                        <li><b>Standartlaşmamış manuel işler :</b> starndart olarak kendi kendine başlamayan sunucular, test ortamları. otomatize edilebilecekken edilmemiş işler. </li>
-                        <li><b>Kahramanlık :</b> bir organizasyonun hedefine ulaşması için takımların yada bireylerin zaman içerisinde sıradanlaşan, gündelik hayatının parçası olan, yapmak zorunda oldukları "Anlamsız, Gereksiz" işler. Örnek vermek gerekirse; üretim tarafında gece 2 de oluşan sorunlar, bir an önce çözülmesinin talep edilmesi gibi. Yer yer övgüye sebep olsa da uzun vadede tam bir israf.</li>
-                    </ul>
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        Why Use Docker for Development?
+                    </h2>
                     <p class="text-gray-600 mb-6">
-                    İsrafsız geliştirmeleriniz olsun..</p>
+                        Docker containers provide several benefits for development:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6">
+                        <li>Consistent environment across team members</li>
+                        <li>Isolated dependencies and configurations</li>
+                        <li>Easy version control of development environment</li>
+                        <li>Quick onboarding of new team members</li>
+                    </ul>
+
+                    <!-- Code Example -->
+                    <div class="bg-gray-900 text-gray-100 rounded-lg p-6 mb-6">
+                        <pre class="overflow-x-auto"><code>
+# Example Dockerfile
+FROM node:16
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "start"]</code></pre>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                        Setting Up VS Code with Dev Containers
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Visual Studio Code's Remote - Containers extension allows you to use a Docker container 
+                        as a full-featured development environment...
+                    </p>
+
+                    <!-- Continue with more content... -->
                 </div>
 
                 <!-- Tags -->
@@ -106,9 +131,29 @@
                     <div class="flex items-center space-x-2">
                         <span class="text-gray-700">Tags:</span>
                         <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
-                            Software Development
+                            Docker
+                        </a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            VS Code
+                        </a>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            Development
                         </a>
                     </div>
+                </div>
+
+                <!-- Share Buttons -->
+                <div class="mt-8 flex items-center space-x-4">
+                    <span class="text-gray-700">Share:</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-blue-500 hover:text-blue-600 transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
                 </div>
             </div>
         </article>

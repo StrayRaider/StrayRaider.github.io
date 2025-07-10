@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Modern Development Environment | StrayRaider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 flex min-h-screen">
+    <!-- Sidebar -->
+    <nav class="fixed w-64 h-screen bg-gray-900 text-white p-8 flex flex-col">
+        <div class="text-center mb-8">
+            <img src="../assets/profile-image.jpg" alt="StrayRaider" 
+                 class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500 object-cover">
+            <h3 class="text-xl font-semibold">StrayRaider</h3>
+            <p class="text-gray-400">Software Developer</p>
+        </div>
+
+        <ul class="flex-grow space-y-4">
+            <li>
+                <a href="../index.html#home" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-home w-6"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#about" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-user w-6"></i> About Me
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#portfolio" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-code w-6"></i> Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#blog" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-blog w-6"></i> Blog
+                </a>
+            </li>
+            <li>
+                <a href="../index.html#contact" class="nav-link flex items-center p-2 rounded hover:bg-blue-500 transition-colors">
+                    <i class="fas fa-envelope w-6"></i> Contact
+                </a>
+            </li>
+        </ul>
+
+        <div class="space-y-4">
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/StrayRaider/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/emre-kaya-724622216/" class="text-2xl hover:text-blue-500 transition-colors">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="text-center text-sm text-gray-500">
+                <p id="utc-time">2025-07-08 12:29:47</p>
+                <p id="current-user">StrayRaider</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="ml-64 flex-grow p-8">
+        <article class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+
+            
+            <div class="p-8">
+                <div class="flex items-center space-x-4 mb-6">
+                    <span class="text-blue-500">
+                        <i class="fas fa-calendar"></i>
+                        <span class="ml-2">July 8, 2025</span>
+                    </span>
+                    <span class="text-gray-500">
+                        <i class="fas fa-tag"></i>
+                        <span class="ml-2">Technology</span>
+                    </span>
+                </div>
+
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">
+                    Ev Sunucusu Nasıl kurulur?
+                </h1>
+
+                <div class="prose max-w-none">
+                    <p class="text-gray-600 mb-6">
+                       Herkese Merhabalar, Sizlere hem kendimi geliştirmek hem de ileriki projelerime alt yapı oluşturmak amacıyla kurduğum bir yapıdan bahsedeceğim. Bir Home Server. <br>
+                       Bir home server sizlere hayal gücünüz genişliğinde imkanlar sunmakta, tüm dosyalarınızı saklamak ve internete bağlı olduğunuz sürece erişmekten tutun; kendi yazılarınızı paylaşmak, ve insanlarla etkileşim kurmaya..<br>
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Ev Sunucu Nedir ? </h2>
+                    <p class="text-gray-600 mb-6">
+                       Peki home server teknik olarak neye denk geliyor? Ufak bir tanım yapacak olursak: Sunucu dediğimiz şey herhangibir bilgisayar ağına bağlı bir <b>bilgisayardır</b>. O halde evdeki bilgisayarımızda gerekli değişiklikleri yaparsak talep ettiğimiz şekilde onu değerlendirebiliriz. ilk ihtiyacımız onun bir işletim sistemine sahip olması. Şimdi bu bilgisayarı internete bağlasak herkes bize erişebilir ve bir sunucu kurabiliriz?.. Keşke..<br>
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Güncel Altyapı</h2>
+                    <p class="text-gray-600 mb-6">
+                       Güncel internetin Kurallarına hoşgeldiniz. Siz herkese erişebilirsiniz fakat herkez size ulaşamaz? Biraz anlamsız geliyor, gelin yapıyı birlikte inceleyelim. Türkiyenin de tarihinde nbahsederek ilerleyelim. İnternet Türkiyede ilkkez 1991 ODTU TUBİTAK ortak projesi ile oluşmaya başladı. Bu dönemler Web siteleri açıldı, ve istediğimiz gibi isteyen istediği sunucuya ipv4, domain istediği şekilde erişebilmekteydi.. Teknoloji gelişti, o güzel bağlantılar çeşitli sebeplerden direkt erişebilir olmaktan çıktı. Şuanda internete son kullanıcılar olarak büyük çoğunlukla CGNAT dediğimiz sistemin "arkasından" erişmekteyiz. IPv4 ün 4.3 milyarlık IP havuzunda kıtlık olduğu söylendiğinden bu teknoloji çıkmış bulunmakta, sizlerin bilgisayarları dış dünyada başka bir bilgisayar "CGNAT" tarafından temsil edilmekte. Dolayısı ile size erişmek siteyen birisi istese de erişememekte.<br>
+
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">CGNAT</h2>
+                    <p class="text-gray-600 mb-6">
+                        Peki biz bunu nasıl aşabiliriz? ISS'i arayıp CGNAT değil public ipv4 istiyorum demek bir seçenek olsa da ben Türknet teknik ekibine bunu anlatamadım, ya anlamak istemiyorlar yada bilmiyorlar? bundan sonra madem her ay 1 Dolar civarı bir para verdiniz 5 Dolara da size tanımlanan ipv4 adresinin Değişmemesi için de atın da o eski güzel günlere dönebilelim :D <br>
+                    Yada benim gibi ben bu internete yeterince ödüyorum alternatifi yok mu derseniz, birçok yöntem denedim, sizlerle bunları paylaşacağım.<br>
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">DNS</h2>
+                    <p class="text-gray-600 mb-6">
+                    
+                    Öncelikle domainden kısaca bahsedelim: Google a her erişmek istediğinizde Google.com'a istek atmak mı istersiniz yoksa 8.8.8.8'e mi? 1 adres hatırlanır gibi dursa da, gündelik kullandığınız her adres için ipv4 ezberlemek bir süre sonra yorucu olacaktır. bu yüzden DNS teknolojisi geliştirilmiştir, özetle ip adresleri ile Domain Name denen "Google.com" gibi bir metni birbirine eşler ki insanlar bunları ezberlemek zorunda kalmasın.<br></p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Dynamic DNS</h2>
+
+                    <p class="text-gray-600 mb-6">
+                    DDNS'e gelecek olursak; CGNAT altında değilseniz; tek probleminiz Sunucunuzun IP'si her ISS istediğinde periyodik olarak değişmekte, Bu IP'ye güvenip sunucu açılmaz Sabah bir uyanmışsınız servis yok? çünkü IP'niz 55.12.55.65'den 55.10.22.11'e değişmiş Kim Sizi nasıl bulabilir?
+                    Sorunun çözümü IP'si değişmeyen bir sağlayıcıya belirli aralıklarla benim IP'm şu, Domainim de bu diye mesaj atmak, ve onun da Domain eşlememizi güncellemesini beklemek.
+                    Öncesinde bahsettiğim CGNAT probleminden ben bunu uygulayamadım..
+                    </p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">Cloudflare Tunnel</h2>
+                    <p class="text-gray-600 mb-6">
+                    Çözümleri araştırırken; Karşıma Cloudflare'in ücretsiz servisi olan Coludflare Tunnel çıktı. Cloudflare Tunnel "güvenli" biçimde kaynaklarınıza public, yönlendirilebilir bir IP adresiniz olmadan da erişebilmenizi sağlamakta. detaylarını okumak için : <b><a href=https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/>Tunnel</a></b>
+                    Bu teknoloji için ihtiyacınız olan ilk şey bir Domain Satın almak. <b><a href=https://www.godaddy.com>Go Dady</a></b> adresinden alabilirsiniz.
+                    Domaini aldıktan sonra Claudflare'in yönlendirmeleri yapabilmesi adına Domaininizi Satın alma yaptığınız firmanın sunucularından, Cloudflare DNS Sunucularına Taşımalısınız.
+                    Bu işlemler tamamlandıktan sonra ; <b><a href=one.dash.cloudflare.com>Tunnel Dashboard</a></b> Adresinde Networks altında, Tunnels'e gelin.
+                    Burada <b>Create a tunnel</b> e tıklayarak isim verdikten sonra Connector olarak Sisteminize <b>Cloudflared</b> uygulamasını kurmanız gerekmekte.
+                    Uygulamayı ister Docker ile isterseniz de direkt makinenize kurabilirsiniz, gerekli komutlar websitesinde bulunmakta.
+                    Tunnel kurulumunu tamamladıktan sonra sıra uygun public hostnameleri atamakta. Tunnels ekranından açtığınızı seçtikten sonra Public hostnames ekranından <b>Add a public hostname</b> diyerek açabilirsiniz. sonrasında örnek olarak basit bir fastapi kodunu çalıştırıp <b>localhost:5000</b> portunu public hostname ile açtıktan sonra domaininzden bu app e erişebilirsiniz.
+                    <br> Gerçekleme sürecinde bir problem yaşarsanız bana ulaşmaktan çekinmeyin. Eğer sunucuyu kurduk sırada ne var diyorsanız belirtmeyi unutmayın :)
+                    Bir sonraki yazıda görüşmek üzere..
+                    </p>
+                </div>
+
+                <!-- Tags -->
+                <div class="mt-8 pt-8 border-t">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-gray-700">Tags:</span>
+                        <a href="#" class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-colors">
+                            Software Development
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        // Same UTC time update script
+        function updateUTCTime() {
+            const now = new Date();
+            const utcString = now.toISOString().slice(0, 19).replace('T', ' ');
+            document.getElementById('utc-time').textContent = utcString;
+        }
+        setInterval(updateUTCTime, 1000);
+        updateUTCTime();
+    </script>
+</body>
+</html>
